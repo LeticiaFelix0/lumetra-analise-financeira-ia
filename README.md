@@ -1,158 +1,83 @@
 # 📊 Lumetra — Análise Financeira Inteligente com IA
 
-Projeto de análise financeira desenvolvido em Python, combinando **Análise de Dados, Business Intelligence e Inteligência Artificial Generativa**.
+Projeto de **Análise de Dados e Inteligência Artificial** desenvolvido para transformar dados financeiros em informações relevantes para análise e tomada de decisão.
 
-O projeto utiliza Python para tratamento e análise dos dados financeiros, Power BI para visualização dos indicadores e a API do Google Gemini para geração automática de análises e insights financeiros estruturados.
+O projeto utiliza **Python** para tratamento e análise dos dados, **Microsoft Power BI** para visualização dos indicadores e **Google Gemini API** para geração automatizada de análises financeiras.
 
 ---
 
-## 🎯 Sobre o Projeto
+## 🎯 Objetivo do Projeto
 
-O objetivo deste projeto é transformar dados financeiros e operacionais em informações que facilitem a interpretação do desempenho de um negócio.
+O objetivo é construir um fluxo completo de análise financeira, desde os dados brutos até a geração de insights utilizando Inteligência Artificial.
 
-A solução foi desenvolvida em etapas:
+O projeto foi desenvolvido seguindo o fluxo:
 
-- Tratamento e preparação dos dados
-- Análise dos dados utilizando Python
-- Cálculo dos principais indicadores financeiros
-- Desenvolvimento de dashboards no Power BI
-- Preparação de um contexto financeiro para Inteligência Artificial
-- Integração com a API do Google Gemini
-- Geração automática de uma análise financeira
-- Estruturação da resposta da IA em JSON
-
-O projeto demonstra como **Python, Business Intelligence e Inteligência Artificial Generativa podem trabalhar em conjunto em uma solução de análise de dados.**
+**Dados brutos → Tratamento com Python → Análise financeira → Power BI → Gemini API → Análise estruturada com IA**
 
 ---
 
 ## 🏗️ Arquitetura do Projeto
 
-
-                    DADOS
-                      │
-                      ▼
-                PYTHON / PANDAS
-                      │
-                      ▼
-              TRATAMENTO DOS DADOS
-                      │
-                      ▼
-             CÁLCULOS FINANCEIROS
-                      │
-             ┌────────┴────────┐
-             │                 │
-             ▼                 ▼
-          POWER BI         CONTEXTO IA
-             │                 │
-             ▼                 ▼
-        DASHBOARDS         GEMINI API
-                               │
-                               ▼
-                     ANÁLISE FINANCEIRA
-                               │
-                               ▼
-                        JSON ESTRUTURADO
+```text
+Dados brutos
+     │
+     ▼
+Python + Pandas
+     │
+     ├── Limpeza dos dados
+     ├── Tratamento de valores nulos
+     ├── Tratamento de duplicidades
+     ├── Padronização dos dados
+     └── Criação dos indicadores
+     │
+     ▼
+Dados tratados
+     │
+     ├───────────────► Power BI
+     │                  │
+     │                  ├── Visão Geral
+     │                  ├── Lojas
+     │                  └── Cancelamentos e Devoluções
+     │
+     ▼
+Contexto financeiro
+     │
+     ▼
+Google Gemini API
+     │
+     ▼
+Análise financeira estruturada
+     │
+     ▼
+JSON
 ```
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+# 🐍 Python — Tratamento e Análise dos Dados
 
-### Python
+A primeira etapa do projeto foi realizada utilizando **Python e Pandas**.
 
-- Python
-- Pandas
-- NumPy
-- python-dotenv
-- Jupyter Notebook
+O processo envolveu:
 
-### Inteligência Artificial
+- Importação dos dados brutos
+- Análise inicial dos dados
+- Tratamento de registros duplicados
+- Tratamento de valores nulos
+- Padronização das informações
+- Criação e validação de indicadores
+- Análise financeira
+- Geração dos dados tratados para utilização no Power BI
 
-- Google Gemini API
-- Google GenAI SDK
-- Engenharia de Prompts
-- Geração de análises financeiras
-- Respostas estruturadas em JSON
-
-### Business Intelligence
-
-- Microsoft Power BI
-- Dashboards interativos
-- Indicadores financeiros
-- Análise por período
-- Análise por loja
-- Análise por categoria
-- Análise por produto
-
-### Dados
-
-- SQL
-- CSV
-- Tratamento e transformação de dados
-
-### Versionamento
-
-- Git
-- GitHub
+Os dados tratados foram utilizados como base para as etapas seguintes do projeto.
 
 ---
 
-## 📈 Indicadores Analisados
+# 📊 Dashboard — Power BI
 
-O projeto realiza cálculos e análises de diferentes indicadores financeiros e operacionais.
+O projeto possui um dashboard desenvolvido no **Microsoft Power BI** para visualização e acompanhamento dos principais indicadores financeiros.
 
-### Indicadores Gerais
-
-- Faturamento total
-- Custo total
-- Lucro bruto
-- Margem bruta
-- Ticket médio
-- Unidades vendidas
-- Total de pedidos
-
-### Análise Mensal
-
-- Faturamento por mês
-- Lucro bruto por mês
-- Evolução mensal do faturamento
-- Maior faturamento mensal
-- Menor faturamento mensal
-
-### Análise por Loja
-
-- Faturamento por loja
-- Lucro por loja
-- Margem por loja
-- Ticket médio por loja
-- Pedidos concluídos por loja
-
-### Análise por Produto
-
-- Faturamento por produto
-- Margem por produto
-
-### Análise por Categoria
-
-- Faturamento por categoria
-- Lucro por categoria
-- Margem por categoria
-
-### Cancelamentos e Devoluções
-
-- Pedidos cancelados
-- Pedidos devolvidos
-- Taxa de cancelamento
-- Taxa de devolução
-- Valores relacionados a cancelamentos e devoluções
-
----
-
-## 📊 Dashboard — Power BI
-
-O projeto possui um dashboard desenvolvido no Microsoft Power BI para visualização e acompanhamento dos principais indicadores financeiros e operacionais.
-
-### 1. Visão Geral
+## 1. Visão Geral
 
 A página de visão geral apresenta os principais indicadores financeiros do negócio.
 
@@ -173,216 +98,240 @@ Entre os indicadores e análises apresentados estão:
 
 ---
 
-### 2. Cancelamentos e Devoluções
+## 2. Cancelamentos e Devoluções
 
-Página destinada à análise dos pedidos cancelados e devolvidos.
-
-São apresentados indicadores e análises relacionados a:
-
-- Cancelamentos
-- Devoluções
-- Taxas de cancelamento
-- Taxas de devolução
-- Valores cancelados
-- Valores devolvidos
-- Evolução dos indicadores
-- Análise por loja
-- Análise por produto
+Dashboard destinado à análise dos cancelamentos e devoluções do negócio.
 
 ![Dashboard Cancelamentos e Devoluções](PowerBI/dashboard_cancelamentos.png)
 
 ---
 
-### 3. Desempenho por Loja
+## 3. Análise por Lojas
 
-Página destinada à comparação do desempenho financeiro e operacional entre as lojas.
+Dashboard destinado à análise do desempenho financeiro das lojas.
 
-São analisados:
+![Dashboard Lojas](PowerBI/dashboard_lojas.png)
 
+---
+
+# 🤖 Inteligência Artificial — Google Gemini API
+
+Uma das principais etapas do projeto foi a integração com a **Google Gemini API**.
+
+A IA recebe um contexto contendo os dados financeiros analisados pelo Python e é orientada a atuar como um analista financeiro.
+
+O prompt solicita uma análise contendo:
+
+1. Resumo do desempenho financeiro
+2. Principais pontos positivos
+3. Pontos que merecem atenção
+4. Destaques por loja
+5. Destaques por categoria
+6. Conclusão executiva
+
+A instrução também determina que a IA:
+
+- Não invente informações
+- Utilize somente os dados fornecidos
+- Trabalhe com os indicadores disponíveis
+- Retorne uma análise objetiva
+
+Exemplo da integração:
+
+```python
+resposta = client.models.generate_content(
+    model="models/gemini-3.5-flash",
+    contents=prompt_ia
+)
+
+print(resposta.text)
+```
+
+---
+
+
+---
+
+# 📈 Principais Indicadores Analisados
+
+Entre os principais indicadores financeiros trabalhados no projeto estão:
+
+- Faturamento total
+- Custo total
+- Lucro bruto
+- Margem bruta
+- Ticket médio
+- Unidades vendidas
+- Quantidade de pedidos
+- Faturamento mensal
+- Lucro mensal
 - Faturamento por loja
-- Lucro bruto por loja
-- Margem bruta por loja
-- Ticket médio por loja
-- Pedidos concluídos por loja
-
-![Dashboard Desempenho por Loja](PowerBI/dashboard_lojas.png)
+- Lucro por loja
+- Margem por loja
+- Faturamento por categoria
+- Lucro por categoria
+- Margem por categoria
+- Cancelamentos
+- Devoluções
 
 ---
 
-## 🤖 Inteligência Artificial
+# 🔎 Exemplo dos Resultados
 
-Uma das etapas do projeto consiste em utilizar Inteligência Artificial Generativa para interpretar os indicadores calculados pelo Python.
+Durante a análise, foram obtidos indicadores como:
 
-O Python realiza os cálculos e prepara um contexto financeiro contendo os principais resultados encontrados.
+**Faturamento total:** R$ 1.835.037,86
 
-Esse contexto é enviado para o Google Gemini.
+**Custo total:** R$ 1.000.593,00
 
-A IA então interpreta os dados e gera uma análise financeira estruturada.
+**Lucro bruto:** R$ 834.444,86
 
-### Fluxo da Análise
+**Margem bruta:** 45,47%
 
+Também foram identificados destaques por loja e categoria, permitindo uma análise mais detalhada do desempenho financeiro.
 
-Dados
-  ↓
-Python
-  ↓
-Tratamento
-  ↓
-Cálculos financeiros
-  ↓
-Indicadores
-  ↓
-Contexto financeiro
-  ↓
-Gemini
-  ↓
-Análise financeira
-  ↓
-JSON estruturado
+---
+
+# 🧠 O que foi aplicado no projeto
+
+O projeto reúne conhecimentos de diferentes áreas de dados:
+
+- 🐍 Python
+- 🐼 Pandas
+- 📊 Power BI
+- 🤖 Inteligência Artificial Generativa
+- 🔌 Consumo de API
+- 📦 JSON
+- 🧹 Tratamento e limpeza de dados
+- 📈 Análise financeira
+- 📊 Visualização de dados
+- 🧠 Engenharia de Prompt
+- 🔧 Git e GitHub
+
+---
+
+# 📁 Estrutura do Repositório
+
+```text
+lumetra-analise-financeira-ia/
+│
+├── Dados/
+│   ├── Brutos/
+│   │   └── vendas_brutas_ia_python.csv
+│   │
+│   ├── Tratado/
+│   │   └── vendas_tratadas.csv
+│   │
+│   └── PowerBI/
+│       └── base_financeira_powerbi.csv
+│
+├── PowerBI/
+│   ├── Lumetra.pbix
+│   ├── dashboard_visao_geral.png
+│   ├── dashboard_lojas.png
+│   └── dashboard_cancelamentos.png
+│
+├── analise_financeira.ipynb
+│
+├── requirements.txt
+│
+├── .gitignore
+│
+└── README.md
 ```
 
 ---
 
+# ⚙️ Como Executar o Projeto
 
-## 📊 Resultados da Análise
-
-Com os dados utilizados no projeto, foram identificados os seguintes indicadores gerais:
-
-| Indicador | Resultado |
-|---|---:|
-| Faturamento total | R$ 1.835.037,86 |
-| Custo total | R$ 1.000.593,00 |
-| Lucro bruto | R$ 834.444,86 |
-| Margem bruta | 45,47% |
-| Maior faturamento mensal | Janeiro/2026 |
-| Menor faturamento mensal | Fevereiro/2026 |
-| Maior faturamento por loja | Asa Sul |
-| Maior lucro por loja | Asa Sul |
-| Maior margem por loja | Guará |
-| Maior faturamento por categoria | Eletrônicos |
-| Maior lucro por categoria | Eletrônicos |
-| Maior margem por categoria | Acessórios |
-
----
-
-## 🔐 Segurança
-
-A chave utilizada para acesso à API do Gemini não é armazenada diretamente no código-fonte.
-
-As credenciais são armazenadas localmente através de uma variável de ambiente:
-
-```env
-GEMINI_API_KEY=sua_chave_aqui
-```
-
-O arquivo `.env` está incluído no `.gitignore` e não deve ser enviado para o GitHub.
-
----
-
-## 🚀 Como Executar o Projeto
-
-### 1. Clonar o repositório
+## 1. Clone o repositório
 
 ```bash
 git clone https://github.com/LeticiaFelix0/lumetra-analise-financeira-ia.git
 ```
 
-### 2. Entrar na pasta
+## 2. Entre na pasta
 
 ```bash
 cd lumetra-analise-financeira-ia
 ```
 
-### 3. Instalar as dependências
+## 3. Instale as dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configurar a API do Gemini
+## 4. Configure a API Key
 
-Crie um arquivo chamado `.env` na raiz do projeto:
+Crie um arquivo `.env` na raiz do projeto:
 
 ```env
 GEMINI_API_KEY=sua_chave_aqui
 ```
 
-### 5. Executar o notebook
+A chave da API **não deve ser publicada no GitHub**.
 
-Abra o arquivo:
+O arquivo `.env` está incluído no `.gitignore`.
+
+## 5. Execute o notebook
+
+Abra:
 
 ```text
 analise_financeira.ipynb
 ```
 
-no Jupyter Notebook ou Visual Studio Code e execute as células do projeto.
+e execute as células do projeto.
 
 ---
 
-## 📁 Estrutura do Projeto
+# 🔐 Segurança
+
+Informações sensíveis, como a chave da API do Gemini, não são armazenadas no repositório.
+
+O projeto utiliza um arquivo `.env` para armazenar a chave localmente:
 
 ```text
-lumetra-analise-financeira-ia/
-│
-├── analise_financeira.ipynb
-│
-├── Dados/
-│   ├── Brutos/
-│   ├── PowerBI/
-│   └── Tratado/
-│
-├── PowerBI/
-│   ├── Lumetra.pbix
-│   ├── dashboard_visao_geral.png
-│   ├── dashboard_cancelamentos.png
-│   └── dashboard_lojas.png
-│
-├── .gitignore
-├── README.md
-└── requirements.txt
+.env
 ```
 
-> O arquivo `.env` é utilizado apenas localmente e não faz parte do repositório.
+Esse arquivo está incluído no `.gitignore` para evitar seu envio ao GitHub.
 
 ---
 
-## 📚 Conceitos Aplicados
+# 📌 Resultado Final
 
-Durante o desenvolvimento do projeto foram aplicados conceitos de:
+O projeto apresenta um fluxo completo de análise financeira:
 
-- Análise exploratória de dados
-- Tratamento de dados
-- Limpeza e transformação de dados
-- Manipulação de DataFrames
-- Agregações
-- Indicadores financeiros
-- Análise temporal
-- Análise por loja
-- Análise por produto
-- Análise por categoria
-- Business Intelligence
-- Visualização de dados
-- Consumo de API
-- Inteligência Artificial Generativa
-- Engenharia de Prompts
-- Estruturação de respostas em JSON
-- Variáveis de ambiente
-- Versionamento com Git
+```text
+Dados
+  ↓
+Tratamento com Python
+  ↓
+Análise dos indicadores
+  ↓
+Power BI
+  ↓
+Contexto financeiro
+  ↓
+Google Gemini API
+  ↓
+Análise automatizada
+  ↓
+JSON estruturado
+```
 
----
-
-## 🎯 Objetivo Profissional
-
-Este projeto foi desenvolvido como projeto de portfólio com foco na aplicação prática de conhecimentos em:
-
-**Data Analytics | Business Intelligence | Python | SQL | Power BI | Inteligência Artificial**
-
-A proposta é demonstrar a utilização integrada de ferramentas de análise de dados, visualização e Inteligência Artificial para transformar dados financeiros em informações estruturadas e insights.
+A proposta demonstra a aplicação integrada de **Análise de Dados, Business Intelligence e Inteligência Artificial Generativa** em um cenário de análise financeira.
 
 ---
 
-## 👩‍💻 Autora
+# 👩‍💻 Autora
 
-**Letícia Felix**
+**Letícia Barreto Felix**
 
-Projeto desenvolvido para fins de estudo, portfólio e demonstração prática de conhecimentos em **Análise de Dados, Business Intelligence, Python e Inteligência Artificial Generativa**.
+Estudante de Análise e Desenvolvimento de Sistemas, com foco em **Análise de Dados, Business Intelligence, Python, Power BI e Inteligência Artificial**.
+
+---
+
+⭐ Se este projeto foi útil ou interessante, fique à vontade para explorar o repositório.
